@@ -1,0 +1,19 @@
+h1 {
+    color: navy;
+    background-color: slateblue;  
+}
+body {
+    background-color: slateblue;
+}
+.fields{
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center; 
+}
+.notebox{
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}

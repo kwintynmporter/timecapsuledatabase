@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<head> 
+    <title> Head Start DB </title>
+    <link rel="stylesheet" href="tcstyle.css"> 
+</head>
+<body> 
+    <h1> Time Capsule Memo Example </h1>
+    <form action="tcconnect.php" method="POST"> 
+        <div class = "fields">
+        <label for="firstname">First name (OPTIONAL):</label><br>
+        <input type="text" id="fname" name="fname" size="15"><br><br>
+        
+        <label for="lastname">Last name(OPTIONAL):</label><br>
+        <input type="text" id="lname" name="lname" size="15"><br><br>
+        
+        <label for="email">Email(OPTIONAL):</label><br>
+        <input type="text" id="email" name="email" size="20"><br><br>
+            </div>
+
+        <h4> Notes (e.g. Three words to describe your Lewis experience?): </h4>
+        <div class = "notebox">
+        <textarea name="notes" rows="4" cols="30" onkeyup="textCounter(this,'counter',1000);" id="message" required> 
+        </textarea><br><br> 
+        <script>
+            function textCounter(field,field2,maxlimit)
+            {
+             var countfield = document.getElementById(field2);
+             if ( field.value.length > maxlimit ) {
+              field.value = field.value.substring( 0, maxlimit );
+              return false;
+             } else {
+              countfield.value = maxlimit - field.value.length;
+             }
+            }
+            </script>
+            </div>
+
+        <input type="submit" value="Submit">
+      </form>
+</body>
